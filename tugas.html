@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+        }
+    
+        h1 {
+            text-align: center;
+        }
+    
+        .container {
+            max-width: 100%;
+            /* Allow full width */
+            margin: 0 auto;
+        }
+    
+        .content {
+            float: left;
+            width: calc(33.33% - 40px);
+            /* 3 columns, subtracting padding */
+            margin: 10px;
+    
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+    
+        .content img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    
+        .content h4 {
+            margin-top: 0;
+        }
+    
+        /* Responsive layout for smaller screens */
+        @media (max-width: 900px) {
+            .content {
+                width: calc(50% - 40px);
+                /* 2 columns on medium screens */
+            }
+        }
+    
+        @media (max-width: 600px) {
+            .content {
+                width: calc(100% - 40px);
+                /* 1 column on small screens */
+            }
+        }
+    
+        /* Clear floats */
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Wisata Bandung</h1>
+    <div class="container">
+        <div class="content">
+            <img src="cihampellas walk.jpeg" alt="Cihampelas Walk">
+            <h4>Cihampelas Walk</h4>
+        </div>
+        <div class="content">
+            <img src="gedung sate.jpeg" alt="Gedung Sate">
+            <h4>Gedung Sate</h4>
+        </div>
+        <div class="content">
+            <img src="geologi museum, japan.jpg" alt="Geologi Museum Japan">
+            <h4>Museum Geologi</h4>
+        </div>
+        <div class="content">
+            <img src="tangkuban perahu.jpeg" alt="Tangkuban Perahu">
+            <h4>Tangkuban Perahu</h4>
+        </div>
+        <div class="content">
+            <img src="trans-studio-bandung.jpg" alt="Trans Studio">
+            <h4>Trans Studio</h4>
+        </div>
+        <div class="content">
+            <img src="wisata-kawah-putih.jpg" alt="Wisata Kawah Putih">
+            <h4>Kawah Putih</h4>
+        </div>
+    </div>
+</body>
+
+</html>
